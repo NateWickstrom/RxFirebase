@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        rx_version = "2.1.16"
-        rx_android_version = "2.0.2"
+        rx_version = "2.2.16"
+        rx_android_version = "2.1.1"
         firebase_auth_version='19.0.0'
         firebase_database_version='19.0.0'
         firebase_storage_version='19.0.0'
@@ -28,8 +28,12 @@ android {
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 6
-        versionName "1.5.5"
+        versionName "1.5.7"
         consumerProguardFiles 'consumer-proguard-rules.pro'
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 }
 
@@ -54,5 +58,5 @@ dependencies {
     testImplementation "com.google.firebase:firebase-firestore:$firebase_firestore_version"
     testImplementation "com.google.firebase:firebase-config:$firebase_remote_version"
     testImplementation 'junit:junit:4.12'
-    testImplementation "org.mockito:mockito-core:2.11.0"
+    testImplementation "org.mockito:mockito-core:2.19.0"
 }
